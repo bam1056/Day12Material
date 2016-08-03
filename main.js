@@ -26,7 +26,7 @@ const drawBoard = () => {
     if (hiddenModal) {
       hiddenModal.className = 'modal'
     }
-    document.querySelector('.modal h1').textContent = `${cellValues[playerTurn]}'s Win!!!`
+    document.querySelector('.modal h1').textContent = `${cellValues[playerTurn]}'s Win !!!`
     let reset = document.querySelector('button')
     reset.addEventListener('click', () => {
       window.location.reload(true)
@@ -60,7 +60,9 @@ const checkForWinner = () => {
 
   for (let i = 0; i < arr.length; i++) {
     let won = arr[i].every(function (m) { return m === playerTurn })
-    if (won) { return true }
+    if (won) {
+      return true
+    }
   }
 }
 

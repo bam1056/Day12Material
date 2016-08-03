@@ -13,6 +13,7 @@ h1 {
 }
 table {
   border: 5px solid white;
+  border-style: groove;
   margin: 0px auto;
 }
 
@@ -20,7 +21,9 @@ td {
   width: 100px;
   height: 100px;
   border: 5px solid white;
-  font-size: 5em;
+  border-style: groove;
+  font-family: 'Passion One', cursive;
+  font-size: 6em;
   text-align: center;
   color: white;
 }
@@ -38,9 +41,9 @@ td {
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgb(0,0,0);
+  background-image: url('images/winBG3.jpg');
   transform: translateY(0%);
-  transition: transform 0.25s linear;
+  /*transition: transform 0.25s linear;*/
 }
 
 .modal.hidden {
@@ -50,10 +53,11 @@ td {
 .modal h1 {
   align-self: center;
   color: white;
-  font-size: 5em;
+  font-size: 10em;
+  text-shadow: 7px 7px 3px gray;
 }
 
 button {
   font-size: 3em;
-  background-color: green;
+  background-color: rgb(199, 94, 68);
 }
