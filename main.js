@@ -40,7 +40,7 @@ const play = (row, col) => {
     if (checkForWinner()) {
       winner = true
       drawBoard()
-      console.log(playerTurn + ' WINS!')
+      console.log(playerTurn + ' WINS !')
     }
     else playerTurn = playerTurn === X ? O : X
   }

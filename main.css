@@ -43,7 +43,7 @@ td {
   background-size: cover;
   background-image: url('images/winBG3.jpg');
   transform: translateY(0%);
-  /*transition: transform 0.25s linear;*/
+  transition: transform 0.25s linear;
 }
 
 .modal.hidden {
