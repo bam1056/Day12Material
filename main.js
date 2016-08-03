@@ -21,7 +21,17 @@ const drawBoard = () => {
     }
   }
   document.querySelector('.message').textContent = `It's ${cellValues[playerTurn]}'s turn.`
-  if (winner) { document.querySelector('.modal.hidden').className = 'modal' }
+  if (winner) {
+    let hiddenModal = document.querySelector('.modal.hidden')
+    if (hiddenModal) {
+      hiddenModal.className = 'modal'
+    }
+    document.querySelector('.modal h1').textContent = `${cellValues[playerTurn]}'s Win!!!`
+    let reset = document.querySelector('button')
+    reset.addEventListener('click', () => {
+      window.location.reload(true)
+    })
+  }
 }
 
 const play = (row, col) => {
