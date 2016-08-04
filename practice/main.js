@@ -25,14 +25,14 @@ const getPlayer = () => {
 }
 
 const checkForWinner = () => {
-  // console.log(boardArray[0])
-  // console.log(boardArray[0][0] === boardArray[0][1] && boardArray[0][1] === boardArray[0][2])
-  if (boardArray[0][0] === boardArray[0][1] && boardArray[0][1] === boardArray[0][2]) {
-    console.log(`${boardArray[0][0]}'s WIN!!`)
-  }
-  if (boardArray[1][0] === boardArray[1][1] && boardArray[1][1] === boardArray[1][2]) {
-    console.log(`${boardArray[1][0]}'s WIN!!`)
-  }
+  if (boardArray[0].every((x) => ((x === 'X') || (x === 'O')))) console.log(`${boardArray[0][0]}'s WIN!!`)
+  if (boardArray[1].every((x) => ((x === 'X') || (x === 'O')))) console.log(`${boardArray[1][0]}'s WIN!!`)
+  if (boardArray[2].every((x) => ((x === 'X') || (x === 'O')))) console.log(`${boardArray[2][0]}'s WIN!!`)
+  if ((boardArray[0][0] === boardArray[1][1]) && (boardArray[1][1] === boardArray[2][2])) console.log(`${boardArray[0][0]}'s WIN!!`)
+  if ((boardArray[0][2] === boardArray[1][1]) && (boardArray[1][1] === boardArray[2][0])) console.log(`${boardArray[0][2]}'s WIN!!`)
+  if ((boardArray[0][0] === boardArray[1][0]) && (boardArray[1][0] === boardArray[2][0])) console.log(`${boardArray[0][0]}'s WIN!!`)
+  if ((boardArray[0][1] === boardArray[1][1]) && (boardArray[1][1] === boardArray[2][1])) console.log(`${boardArray[0][1]}'s WIN!!`)
+  if ((boardArray[0][2] === boardArray[1][2]) && (boardArray[1][2] === boardArray[2][2])) console.log(`${boardArray[0][2]}'s WIN!!`)
 }
 
 const init = () => {
