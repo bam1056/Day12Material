@@ -1,3 +1,49 @@
 body {
-  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  margin: 0px auto;
+  border: 3px solid black;
+}
+td {
+  width: 100px;
+  height: 100px;
+  border: 5px solid black;
+  /*font-family: 'Passion One', cursive;*/
+  font-size: 6em;
+  text-align: center;
+  /*color: white;*/
+}
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  /*background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('images/winBG3.jpg');*/
+  transform: translateY(0%);
+  transition: transform 0.25s linear;
+}
+
+.modal.hidden {
+  transform: translateY(100%);
+}
+
+.modal h1 {
+  align-self: center;
+  font-size: 10em;
+  text-shadow: 7px 7px 3px gray;
 }
