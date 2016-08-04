@@ -2,9 +2,9 @@
 let playerTurn = 'X'
 let count = 0
 let boardArray = [
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', '']
+  ['1', '2', '3'],
+  ['4', '5', '6'],
+  ['7', '8', '9']
 ]
 
 const playBox = (box) => {
@@ -25,7 +25,14 @@ const getPlayer = () => {
 }
 
 const checkForWinner = () => {
-
+  // console.log(boardArray[0])
+  // console.log(boardArray[0][0] === boardArray[0][1] && boardArray[0][1] === boardArray[0][2])
+  if (boardArray[0][0] === boardArray[0][1] && boardArray[0][1] === boardArray[0][2]) {
+    console.log(`${boardArray[0][0]}'s WIN!!`)
+  }
+  if (boardArray[1][0] === boardArray[1][1] && boardArray[1][1] === boardArray[1][2]) {
+    console.log(`${boardArray[1][0]}'s WIN!!`)
+  }
 }
 
 const init = () => {
